@@ -13,7 +13,7 @@ namespace MenuControlledApp
         {
             try
             {
-                //DataHelpers.LoadData();
+                
                 Menu.DisplayMenu();
             }
             catch (Exception e)

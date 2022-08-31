@@ -41,22 +41,26 @@ namespace PersonIndex.Helpers
             Person person = new Person();
             person.setName(name);
             DataStorage.personList.Add(person);
+            DataStorage.AddData(person.name);
+
+            
             //nameList.Add(name);
         }
-        internal static void showList()
+        internal static void ShowList(List<Person> dataList)
         {
             // for(int i = 0; i < nameList.Count; i++) {
             //     Console.WriteLine($"{i + 1} {nameList[i]}");
             // }
-            for (int i = 0; i < DataStorage.personList.Count; i++)
-            {
-                Console.WriteLine($"{i + 1} {DataStorage.personList[i].getName()}");
-            }
+            //for (int i = 0; i < DataStorage.personList.Count; i++)
+            //{
+            //    Console.WriteLine($"{i + 1} {DataStorage.personList[i].getName()}");
+            //}
 
+            foreach (var person in dataList) Console.WriteLine($"{person.name}"); ;
 
         }
 
-        internal static void deleteFromList()
+        internal static void DeleteFromList()
         {
             Console.WriteLine("Indtaste nr på person");
             int pnr = Convert.ToInt32(Console.ReadLine());

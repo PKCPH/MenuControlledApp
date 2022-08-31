@@ -4,10 +4,10 @@ using System.Text;
 
 namespace MenuControlledApp
 {
-    internal class Person
+    public class Person
     {
-        internal string name;
-        public int Age { get; set; }
+        public string name { get; set; }
+        
 
         //default constructor
         public Person() { }

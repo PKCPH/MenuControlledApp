@@ -10,6 +10,8 @@ namespace PersonIndex.Helpers
     {
         internal static void DisplayMenu()
         {
+            var dataList = DataStorage.LoadData();
+
             bool continueInMenu = true;
             while (continueInMenu)
             {
@@ -31,11 +33,11 @@ namespace PersonIndex.Helpers
                         Console.ReadKey();
                         break;
                     case "3":
-                        ListEditor.showList();
+                        ListEditor.ShowList(dataList);
                         Console.ReadKey();
                         break;
                     case "4":
-                        ListEditor.deleteFromList();
+                        ListEditor.DeleteFromList();
                         break;
                     case "5":
                         continueInMenu = false;
