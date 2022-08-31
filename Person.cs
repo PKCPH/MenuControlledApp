@@ -6,8 +6,20 @@ namespace MenuControlledApp
 {
     internal class Person
     {
-        private string name;
-        public string test = "Dingdong";
+        internal string name;
+        public int Age { get; set; }
+
+        //default constructor
+        public Person() { }
+
+        //constructor
+        public Person(string name)
+        {
+
+            this.name = name;
+
+        }
+
 
         public void setName(string name)
         {
